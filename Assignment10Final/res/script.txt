@@ -1,0 +1,40 @@
+load ./res/lighthouse.ppm lighthouse
+darken lighthouse 50
+save lighthouse ./res/darkened_lighthouse.ppm
+brighten lighthouse 100
+save lighthouse ./res/brightened_lighthouse.ppm
+one-component red lighthouse
+save lighthouse ./res/red_component_lighthouse.ppm
+load ./res/lighthouse.ppm lighthouse2
+one-component green lighthouse2
+save lighthouse2 ./res/green_component_lighthouse.ppm
+load ./res/lighthouse.ppm lighthouse3
+one-component blue lighthouse3
+save lighthouse3 ./res/blue_component_lighthouse.ppm
+load ./res/lighthouse.ppm lighthouse4
+intensity lighthouse4
+save lighthouse4 ./res/intensity_lighthouse.ppm
+load ./res/lighthouse.ppm lighthouse5
+luma lighthouse5
+save lighthouse5 ./res/luma_lighthouse.ppm
+load ./res/lighthouse.ppm lighthouse6
+value-component lighthouse6
+save lighthouse6 ./res/value_component_lighthouse.ppm
+load ./res/lighthouse.ppm lighthouse7
+filter blur lighthouse7
+save lighthouse7 ./res/blurry_lighthouse.png
+save lighthouse7 ./res/blurry_lighthouse.jpg
+save lighthouse7 ./res/blurry_lighthouse.ppm
+load ./res/lighthouse.ppm lighthouse8
+filter sharpen lighthouse8
+save lighthouse8 ./res/sharp_lighthouse.jpg
+load ./res/lighthouse.ppm lighthouse9
+color sepia lighthouse9
+save lighthouse9 ./res/sepia_lighthouse.jpg
+load ./res/lighthouse.ppm lighthouse10
+color greyscale lighthouse10
+save lighthouse10 ./res/grey_lighthouse10.jpg
+load ./res/lighthouse.ppm lighthouse11
+deep-fry lighthouse11
+save lighthouse11 ./res/deep_fried_lighthouse.jpg
+quit

@@ -1,0 +1,86 @@
+IF USING SCRIPT OR COMMAND-LINE INPUT:
+Below is a list of the accepted commands for using a script or the command-line, and the structure
+in which they need to be inputted to the command line or a readable script file that is passed to
+the controller. All elements/arguments are required in the order provided to achieve the desired
+function.
+
+The .jar file can be opened or run from the command line. If running from the command line, an
+additional -f flag can be added along with a file path to a readable script in order to run
+commands.
+
+The terminal command would be (assuming in project directory):
+ - run without script: java -jar res/HW9.jar
+ - run with script: java -jar res/HW9.jar -f res/script.txt
+
+Commands (must follow format below)
+#Description
+command line command
+
+#Load image.ppm and call it 'loaded-image' (defaults to current directory if no path provided)
+load res/image.ppm loaded-image
+
+#Brighten loaded-image by factor of 50 (acceptable factor range [0, 255])
+brighten loaded-image 50
+
+#Darken loaded-image by factor of 50 (acceptable factor range [0, 255])
+darken loaded-image 50
+
+#Apply intensity filter to loaded-image
+intensity loaded-image
+
+#Apply luma filter to loaded-image
+luma loaded-image
+
+#Apply one-component filter to loaded-image (supports red, green, blue components)
+one-component red loaded-image
+one-component green loaded-image
+one-component blue loaded-image
+
+#Apply ValueComponent filter to loaded-image
+value-component loaded-image
+
+#Apply deepfried filter to loaded-image
+deep-fry loaded-image
+
+#Apply filter operations to loaded-image (supports blur, sharpen)
+filter blur loaded-image
+filter sharpen loaded-image
+
+#Apply color transformations to loaded-image (supports sepia, greyscale, grayscale)
+color sepia loaded-image
+color greyscale loaded-image
+color grayscale loaded-image
+
+#Save loaded-image and call it saved-image.extension (defaults to current directory)
+save loaded-image saved-image.extension
+
+#Quit program
+quit
+
+IF USING GUI:
+    - Feedback message:
+        - This program features a feedback message in the bottom left of the window
+        - It will update with an informative message after any action is taken, whether the action
+            succeeds or fails
+    - Load Image:
+        - Loads an image into the program via file browser, prompts for nickname
+        - Populates image list on the right side of the program
+        - Enables multiple images to be loaded during a session (one at a time via browser)
+    - Open Image:
+        - Once the image is loaded, click on the Open: image button to display the image
+        - This sets the displayed image as the active image, ready for saving/transformations
+        - To switch between loaded images, simply click Open: image for the image on which you wish
+            - to operate
+    - Apply transformation:
+        - Beneath the Load Image button are the transformation buttons
+        - Simply click on your desired transformation
+            - Transformation will be applied to the currently displayed image
+            - Brighten and darken will prompt user for a brightening/darkening factor
+                - Acceptable values between [0, 255]
+    - Save Image:
+        - Beneath the transformation buttons is the Save Image button
+        - Simply click on this button to begin saving the currently displayed image
+        - A file browser will open and prompt for a location and desired save name
+    - Exiting the program:
+        - Simply close the window and the program will quit on its own
+
